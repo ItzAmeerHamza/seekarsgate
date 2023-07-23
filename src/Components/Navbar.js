@@ -71,7 +71,7 @@ import {
                 {isMatchmd ? null : (
                   <Grid item lg={6} md={6}>
                     <Stack direction="row" spacing={3}>
-                     <Typography variant="h5" ml="-20px"><b>Seekersgate</b></Typography>
+                     <Typography variant="h5" ml="-20px"><b>SeekersGate</b></Typography>
                       {/* <TextField
                         variant="outlined"
                         size="small"

@@ -24,6 +24,9 @@ function SignupModal({ open, handleClose }) {
     name: "",
     password: "",
     confirmpassword: "",
+    address:"",
+    city:"",
+    gender:""
   });
 
   const handleChange = (e) => {
@@ -93,8 +96,8 @@ function SignupModal({ open, handleClose }) {
     bgcolor: "#ffffff",
     borderRadius: "10px",
     boxShadow: 24,
-    pt: 4,
-    pb: 8,
+    pt: 1,
+    pb: 4,
     px: 4,
   };
   return (
@@ -137,6 +140,9 @@ function SignupModal({ open, handleClose }) {
                 size="small"
               />
             </Stack>
+            
+            {/* <Grid container>
+            <Grid item lg={6} md={6} sm={6} sx={{pr:"4px"}}>
             <Stack spacing={1}>
               <label>
                 <b>Email Address</b>
@@ -152,9 +158,67 @@ function SignupModal({ open, handleClose }) {
                 size="small"
               />
             </Stack>
-
-           
-
+            </Grid>
+            <Grid item lg={6} md={6} sm={6}>
+            <Stack spacing={1}>
+              <label>
+                <b>Gender</b>
+              </label>
+              <TextField
+                type="email"
+                value={user.gender}
+                name="gender"
+                onChange={handleChange}
+                autoComplete="off"
+                sx={inputField}
+                required
+                size="small"
+                select
+              >         
+      <MenuItem value="male">Male</MenuItem>
+      <MenuItem value="female">Female</MenuItem>
+              </TextField>
+            </Stack>
+            </Grid>
+           </Grid> */}
+           <Grid container>
+            <Grid item lg={6} md={6} sm={6} sx={{pr:"4px"}}>
+            <Stack spacing={1}>
+              <label>
+                <b>Address</b>
+              </label>
+              <TextField
+                type="email"
+                value={user.address}
+                name="address"
+                onChange={handleChange}
+                autoComplete="off"
+                sx={inputField}
+                required
+                size="small"
+              />
+            </Stack>
+            </Grid>
+            <Grid item lg={6} md={6} sm={6} sx={{pt:isMatchsm?"4px":null}}>
+            <Stack spacing={1}>
+              <label>
+                <b>City</b>
+              </label>
+              <TextField
+                type="email"
+                value={user.city}
+                name="city"
+                onChange={handleChange}
+                autoComplete="off"
+                sx={inputField}
+                required
+                size="small"
+              />
+            </Stack>
+            </Grid>
+           </Grid>
+           <Grid container>
+            <Grid item lg={6} md={6} sm={6} sx={{pr:"4px"}}>
             <Stack spacing={1}>
               <label>
                 <b>Password</b>
@@ -176,14 +240,15 @@ function SignupModal({ open, handleClose }) {
                         sx={{ color: "#3E39D1" }}
                         edge="end"
                       >
-                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                        {showPassword ? <Visibility /> : <VisibilityOff />}
                       </IconButton>
                     </InputAdornment>
                   ),
                 }}
               />
             </Stack>
-
+            </Grid>
+            <Grid item lg={6} md={6} sm={6} sx={{pt:isMatchsm?"4px":null}}>
             <Stack spacing={1}>
               <label>
                 <b>Confirm Password</b>
@@ -206,9 +271,9 @@ function SignupModal({ open, handleClose }) {
                         edge="end"
                       >
                         {showConfirmPassword ? (
-                          <VisibilityOff />
-                        ) : (
                           <Visibility />
+                        ) : (
+                          <VisibilityOff />
                         )}
                       </IconButton>
                     </InputAdornment>
@@ -216,6 +281,11 @@ function SignupModal({ open, handleClose }) {
                 }}
               />
             </Stack>
+            </Grid>
+           </Grid>
+           
+
+           
             <br />
             <Stack spacing={1}>
               <Button

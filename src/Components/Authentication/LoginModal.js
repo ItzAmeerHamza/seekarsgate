@@ -16,9 +16,10 @@ import {
   Modal,
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
 function SignupModal({ open, handleClose }) {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     email: "",
     phone: "",
@@ -33,28 +34,29 @@ function SignupModal({ open, handleClose }) {
   };
 
   const handleAdd = (e) => {
-    if (user.email == "") {
-      alert("Please Enter Your Name");
-    } else if (user.password == "") {
-      alert("Please Enter Your Password");
-    } else {
-      e.preventDefault();
-      axios.post("enterUrl", {
-        email: user.email,
-        password: user.password,
-      }).then((response) => {
-        if (response.data.message) {
-          alert("wrong password or User Name");
-        } else {
-          const userData = response.data;
-          console.log(userData);
-          window.location.href = "/home";
-          localStorage.setItem("UsersData", JSON.stringify(userData))
-        }
-      })
-      user.name = "";
-      user.password = "";
-    }
+    navigate('/ourcourses');
+    // if (user.email == "") {
+    //   alert("Please Enter Your Name");
+    // } else if (user.password == "") {
+    //   alert("Please Enter Your Password");
+    // } else {
+    //   e.preventDefault();
+    //   axios.post("enterUrl", {
+    //     email: user.email,
+    //     password: user.password,
+    //   }).then((response) => {
+    //     if (response.data.message) {
+    //       alert("wrong password or User Name");
+    //     } else {
+    //       const userData = response.data;
+    //       console.log(userData);
+    //       window.location.href = "/home";
+    //       localStorage.setItem("UsersData", JSON.stringify(userData))
+    //     }
+    //   })
+    //   user.name = "";
+    //   user.password = "";
+    //}
   };
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);

@@ -56,7 +56,7 @@ const LandingPage = () => {
     {
       pic: Image,
       name: "JavaScript",
-      message:"avaScript is a high-level programming language that is commonly used for creating interactive and dynamic web pages.",
+      message:"avaScript is a high-level programming language that is commonly used for creating interactive interface.",
       price: "15$",
     },
     {
@@ -74,7 +74,7 @@ const LandingPage = () => {
     {
       pic: Image,
       name: "JavaScript",
-      message:"avaScript is a high-level programming language that is commonly used for creating interactive and dynamic web pages.",
+      message:"avaScript is a high-level programming language that is commonly used for creating interactive interface.",
       price: "15$",
     },
     {
@@ -92,7 +92,7 @@ const LandingPage = () => {
     {
       pic: Image,
       name: "JavaScript",
-      message:"avaScript is a high-level programming language that is commonly used for creating interactive and dynamic web pages.",
+      message:"avaScript is a high-level programming language that is commonly used for creating interactive interface.",
       price: "15$",
     },
     {
