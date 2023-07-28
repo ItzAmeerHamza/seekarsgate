@@ -25,6 +25,7 @@ import {
   import "./Navbar.css";
   import LoginModal from "./Authentication/LoginModal";
   import SignupModal from "./Authentication/SignupModal";
+  import { useNavigate } from "react-router-dom";
   const Navbar = () => {
     // CSS AND STATES
     const theme = useTheme();
@@ -32,7 +33,7 @@ import {
     const isMatchlg = useMediaQuery(theme.breakpoints.down("lg"));
    
     const [openModal, setOpenModal] = useState(false);
-  
+    const Navigate = useNavigate();
     const handleOpenModal = () => {
       setOpenModal(true);
     };
@@ -49,6 +50,9 @@ import {
     const handleCloseModal1 = () => {
       setOpenModal1(false);
     };
+     const goToAdmin = () =>{
+      Navigate('/adminourcourses')
+     }
     return (
       <>
       
@@ -156,6 +160,19 @@ import {
                         }}
                       >
                         <b>Get Started</b>
+                      </Button>
+                      <Button
+                        variant="text"
+                        onClick={goToAdmin}
+                        sx={{
+                          color: "#fff",
+                          textTransform: "capitalize",
+                          background: "transparent",
+                          border: "1px solid white",
+                          px: 3,
+                        }}
+                      >
+                        <b>Admin</b>
                       </Button>
                       <SignupModal open={openModal1} handleClose={handleCloseModal1} />
                   </Stack>

@@ -6,6 +6,9 @@ import Billing from './Components/Dashboard/Billing';
 import MyCourses from './Components/Dashboard/MyCourses';
 import VideoTutorials from './Components/Dashboard/VideoTutorials';
 import TeachingStaff from './Components/Dashboard/TeachingStaff';
+import AdminLearners from './Components/Admin/Learners';
+import AdminOurCourses from './Components/Admin/OurCourses';
+import AdminTeacher from './Components/Admin/Teachers';
 function App() {
   return (
     <>
@@ -18,6 +21,9 @@ function App() {
     <Route path="/mycourses" element={<MyCourses />} />
     <Route path="/videotutorials" element={<VideoTutorials />} />
     <Route path="/teachingStaff" element={<TeachingStaff />} />
+    <Route path="/adminlearners" element={<AdminLearners />} />
+    <Route path="/adminourcourses" element={<AdminOurCourses />} />
+    <Route path="/adminteacher" element={<AdminTeacher />} />
     </Routes>
     </BrowserRouter>
     </>

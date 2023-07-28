@@ -125,14 +125,14 @@ export default function PersistentDrawerLeft() {
   const isMatchmd = useMediaQuery(theme.breakpoints.down("md"));
   const routes = [{
     name:"Our Courses",
-    link:"/ourCourses"
+    link:"/adminourcourses"
   },{
-    name:"Teaching Staff",
-    link:"/teachingStaff"
+    name:"Teachers",
+    link:"/adminteacher"
   },{
-    name:"My Courses",
-    link:"/myCourses"
-}]
+    name:"Learners",
+    link:"/adminlearners"
+  }]
   return (
     <Box sx={{ display: "flex", }}>
       <CssBaseline />
